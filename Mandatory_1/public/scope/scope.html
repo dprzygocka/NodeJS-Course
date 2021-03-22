@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="scope&variable.js"></script>
+
+    <title>Scope & Variables</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Scope & Variables</h1>
+                <hr>
+                <h4>Scope</h4>
+                <p>Global scope</p>
+                <ul>
+                    <li>
+                        <p>
+                            Variables which are declared outside of any functions, can be accessed from anywhere in the program.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Variables declared inside a block can be access from outside of the block.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Redeclaring a variable inside a block causes the variable to change outside of the block.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Declaring variable with var or let ouside of a block will result with global scope for both of them.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            In HTML global scope is the window object. Global variables declared with var belong to windows object where defined with let does not.
+                        </p>
+                    </li>
+                </ul>
+
+                </p>
+                <p>Function scope</p>
+                <ul>
+                    <li>
+                        <p>
+                            Variables which are declared inside a function, can be accessed from inside of the given function.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Variables declared inside a block can NOT be access from outside of the block.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Redeclaring a variable inside a block causes the variable to change outside of the block.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Declaring variable with var or let inside function will result with function scope for both of them.
+                        </p>
+                    </li>
+                </ul>
+                <p>Loop scope</p>
+                <h6>Example:</h6>
+                <code>
+                    let/var i = 2 <br>
+                    for (let/var i = 0, i &lt 10, i++){}
+                </code>
+                <ul>
+                    <li>
+                        <p>
+                            Declaring variable i using var in loop scope causes change of the variable outside of the loop
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Declaring variable i using let in loop scope causes i to be visible only within the loop scope
+                        </p>
+                    </li>  
+                </ul>
+                <h4>Variables</h4>
+                <p>
+                    Containers for storing data values.
+                </p>
+                <p> Variable "let"</p>
+                <ul>
+                    <li>
+                        <p>
+                            Defines variable in restricted scope
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Provides block scope
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Redeclaring a let variable with let, in the same scope, or in the same block, is not allowed
+                        </p>
+                    </li>
+                </ul>
+                <p> Variable "const"</p>
+                <ul>
+                    <li>
+                        <p>
+                            Defines variables which can not be changed
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Provides block scope
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Defines a constant reference to a value which mean that we cannot change constant primitive values, but we can change the properties of constant objects
+                        </p>
+                    </li>
+                </ul>
+                <p> Variable "var"</p>
+                <ul>
+                    <li>
+                        <p>
+                            Defines variable in file/global scope
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Redeclaring is allowed anywhere in the program
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Defines a constant reference to a value which mean that we cannot change constant primitive values, but we can change the properties of constant objects
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Redeclaring a var variable with let or const(or other way around), in the same scope, or in the same block, is not allowed.
+                </p>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>
+

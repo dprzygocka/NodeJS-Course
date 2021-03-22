@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="arrays.js"></script>
+
+    <title>Arrays</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Arrays</h1>
+                <hr>
+                <ul>
+                    <li>
+                        <p>Special type of objects.</p>
+                    </li>
+                    <li>
+                        <p>Store multiple values in a single variable which can be accessed by index number.</p>
+                        <h6>Example</h6>
+                        <code>
+                            let array = [10,20,30];<br>
+                            Console.log( array[0]);<br>
+                            Output: 10    
+                        </code>
+                    </li>
+                </ul>
+                <p>
+                    Full array can be accessed by referring to the array name.
+                </p>
+                <h6>Example</h6>
+                <code>
+                    let a = [“b”, “a”, “n”]<br>
+                    console.log(a)<br>
+                    output: [ “b”, “a”, “n” ]
+                </code>
+                <p>
+                    Array can store different types in the same array.
+                </p>
+                <h6>Example</h6>
+                <code>
+                    let arr = [“car”, 2, 4.6]
+                </code>
+                <p>
+                    Ways to create an array:
+                </p>
+                <ul>
+                    <li>
+                        <p>Array literal.</p>
+                        <h6>Example</h6>
+                        <code>
+                            var array_name = [item1, item2, ...];     
+                        </code>
+                    </li> 
+                    <li>
+                        <p>JavaScript key word.</p>
+                        <h6>Example</h6>
+                        <code>
+                            let cars = new Array("Saab", "Volvo", "BMW");     
+                        </code>
+                    </li>     
+                </ul>
+                <p>To change the elements of an array get an element by referring to his index and assign it a new value.</p>
+                <h6>Example</h6>
+                <code>
+                    let array = [“yes”, “no”, “maybe”]<br>
+                    array[0] = 'new';<br>
+                    console.log(array);<br>
+                    output: [“yes”, “no”, “maybe”]
+                </code>
+                <p>Arrays methods:</p>
+                <ul>
+                    <li>
+                        <p>push():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const friends = [];<br>
+                            friends.push(<br>
+                                {name: "Karolina", age: 24},<br>
+                                {name: "Marianna", age: 22},<br>
+                                {name: "Michal", age: 26});<br>
+                            console.log(friends)<br>
+                            output: <br>
+                            [<br>
+                            { name: 'Karolina', age: 24 },<br>
+                            { name: 'Marianna', age: 22 },<br>
+                            { name: 'Michal', age: 26 }<br>
+                            ]<br>
+                        </code>
+                    </li> 
+                    <li>
+                        <p>pop():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const diet = ["tomato", "cucumber", "rocket"];<br>
+                            diet.pop();<br>
+                            console.log(diet);<br>
+                            output: [ 'tomato', 'cucumber']
+                        </code>
+                    </li> 
+                    <li>
+                        <p>toString():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];<br>
+                            console.log(numbers.toString())<br>
+                            output: 5,3,2,7,11,12,0,-20,6
+                        </code>
+                    </li>   
+                    <li>
+                        <p>join():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];<br>
+                            console.log(numbers.join("*"))<br>
+                            output: 5*3*2*7*11*12*0*-20*6
+                        </code>
+                    </li>   
+                    <li>
+                        <p>shift():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];<br>
+                            numbers.shift();<br>
+                            console.log(numbers);<br>
+                            output: [3, 2, 7, 11, 12, 0, -20, 6]
+                        </code>
+                    </li> 
+                    <li>
+                        <p>unhift():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];<br>
+                            numbers.unshift();<br>
+                            console.log(numbers);<br>
+                            output: [5, 5, 3, 2, 7, 11, 12, 0, -20, 6]
+                        </code>
+                    </li>
+                    <li>
+                        <p>delete key word:</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];<br>
+                            delete numbers[0];<br>
+                            console.log(numbers);<br>
+                            output: [ <1 empty item>, 3, 2, 7, 11, 12, 0, -20, 6 ]
+                        </code>
+                    </li> 
+                    <li>
+                        <p>splice():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const diet = ["tomato", "cucumber", "rocket"];<br>
+                            diet.splice(2,0,"hamburger","soda","pizza");<br>
+                            console.log(diet);<br>
+                            Output: [ 'tomato', 'cucumber', 'hamburger', 'soda', 'pizza', 'rocket' ]
+                        </code>
+                    </li> 
+                    <li>
+                        <p>concat():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];<br>
+                            const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];<br>
+                            console.log(lettersExpanded.concat(numbers))<br>
+                            output: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 5,   3,   2,   7, 11,  12,  0,   -20, 6]
+                        </code>
+                    </li> 
+                    <li>
+                        <p>slice():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];<br>
+                            console.log(lettersExpanded.slice(2));<br>
+                            output: [ 'c', 'd', 'e', 'f', 'g', 'h' ]
+                        </code>
+                    </li> 
+                    <li>
+                        <p>sort():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, 6];<br>
+                            console.log(numbers.sort());<br>
+                            output: [-20, 0, 1, 1, 2,3, 5, 6, 7]
+                        </code>
+                    </li> 
+                    <li>
+                        <p>reverse():</p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, 6];<br>
+                            console.log(numbers.reverse());<br>
+                            output: [6, -20, 0, 1, 1,7,   2, 3, 5]                            
+                        </code>
+                    </li>
+                </ul>
+                <p>Compare function</p>
+                <ul>
+                    <li>
+                        <p>sort function sorts values as strings so compare function is used to defines alternative sort order</p>
+                    </li>
+                    <li>
+                        <p>should return a negative, zero, or positive value, depending on the arguments</p>
+                    </li>
+                </ul>
+                <h6>Example</h6>
+                <code>
+                    let compare = function(a, b){<br>
+                        return a – b
+                                                  
+                </code>
+                <p>Array iteration methods:</p>
+                <ul>
+                    <li>
+                        <p>
+                        array.forEach(): calls a function (a callback function) once for each array element.<br>
+                        Function takes 3 arguments: item value, item index, array itself.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            lettersExpanded.forEach(number => console.log(number));<br>
+                            output: <br>
+                            a<br>
+                            b<br>
+                            c<br>
+                            d<br>
+                            e<br>
+                            f<br>
+                            g<br>
+                            h
+                        </code>
+                    </li> 
+                    <li>
+                        <p>
+                            array.map(): creates a new array by performing a function on each (non-empty) array element.<br>
+                            Function takes 3 arguments: item value, item index, array itself.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];<br>
+                            const lettersExpanded2 = lettersExpanded.map(element => {return element+1} );<br>
+                            console.log(lettersExpanded2)<br>
+                            output: ['a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1']
+                        </code>
+                    </li>    
+                    <li>
+                        <p>
+                            array.filter(): creates a new array with array elements that passes certain test.<br>
+                            Function takes 3 arguments: item value, item index, array itself.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];<br>
+                            const lettersExpanded2 = lettersExpanded.filter((number,index) => {return  index % 2 != 0 ? number : ""});<br>
+                            console.log(lettersExpanded2)<br>
+                            output: [ 'b', 'd', 'f', 'h' ]
+                        </code>
+                    </li>  
+                    <li>
+                        <p>
+                            array.reduce(): runs a function on each array element to produce (reduce it to) a single value.<br>
+                            Function takes 4 arguments: total (the initial value / previously returned value), item value, item index, array itself.
+                            
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, 6];<br>
+                            console.log(numbers.reduce((total,value) => {return total + value }));<br>
+                            output: 5
+                        </code>
+                    </li> 
+                    <li>
+                        <p>
+                            array.every(): check if all array values pass a test.<br>
+                            Function takes 3 arguments: item value, item index, array itself.       
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, 6];<br>
+                            console.log(numbers.every(value => value > -22));<br>
+                            output: true
+                        </code>
+                    </li>
+                    <li>
+                        <p>
+                            array.some(): check if some array values pass a test.<br>
+                            Function takes 3 arguments: item value, item index, array itself.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, 6];<br>
+                            console.log(numbers.some(value => value > 0));<br>
+                            output: true
+                        </code>
+                    </li>
+                    <li>
+                        <p>
+                            array.indexOf(item, start): searches an array for an element value and returns its position (index).<br>
+                            If no item found returns -1.<br>
+                            If more than one found it return first occurance.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const significantMathNumbers = [0, 2.718, 3.14159, 1729];<br>
+                            console.log(significantMathNumbers.indexOf(1729));<br>
+                            output: 3
+                        </code>
+                    </li> 
+                    <li>
+                        <p>
+                            array.find(): returns the value of the first array element that passes a test function.<br>
+                            Function takes 3 arguments: item value, item index, array itself.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, -6];<br>
+                            console.log(numbers.find(value => value &lt 0));<br>
+                            output: -20
+                        </code>
+                    </li>
+                    <li>
+                        <p>
+                            array.findIndex(): returns the index of the first array element that passes a test function.<br>
+                            Function takes 3 arguments: item value, item index, array itself.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            const numbers  = [5, 3, 2, 7, 1, 1, 0, -20, -6];<br>
+                            console.log(numbers.findIndex(value => value &lt 0));<br>
+                            output: 7
+                        </code>
+                    </li> 
+                </ul>
+                <p>Looping Array Elements:</p>
+                <ul>
+                    <li>
+                        <p>for loop</p>
+                        <h6>Example</h6>
+                        <code>
+                            for (i = 0; i &lt numbers.length; i++) {<br>
+                                console.log(numbers[i]);<br>
+                            }<br>
+                            output: <br>
+                            5<br>
+                            3<br>
+                            2<br>
+                            7<br>
+                            1<br>
+                            1<br>
+                            0<br>
+                            -20<br>
+                            -6                     
+                        </code>
+                    </li> 
+                </ul>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>

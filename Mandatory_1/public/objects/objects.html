@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="objects.js"></script>
+
+    <title>Objects</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Objects</h1>
+                <hr>
+                <p>
+                    Can contain many values written as name : value pairs.<br>
+                    Object is a collection of named values.<br>
+                    Objects can have methods which are actions that can be performed on objects.<br>
+                    Object properties can be both primitive values, other objects, and functions.<br>
+                    An object method is an object property containing a function definition.<br>
+                    Objects are mutable: They are addressed by reference, not by value.
+                </p>
+                <ul>
+                    <li>
+                        <p>Booleans can be objects (if defined with the new keyword).</p>
+                    </li>
+                    <li>
+                        <p>Numbers can be objects (if defined with the new keyword).</p>
+                    </li>
+                    <li>
+                        <p>Strings can be objects (if defined with the new keyword).</p>
+                    </li>
+                    <li>
+                        <p>Dates are always objects.</p>
+                    </li>
+                    <li>
+                        <p>Maths are always objects.</p>
+                    </li>
+                    <li>
+                        <p>Regular expressions are always objects.</p>
+                    </li>
+                    <li>
+                        <p>Arrays are always objects.</p>
+                    </li>
+                    <li>
+                        <p>Functions are always objects.</p>
+                    </li>
+                    <li>
+                        <p>Objects are always objects.</p>
+                    </li>
+                </ul>
+                <p>
+                    There are different ways to create new objects:
+                </p>
+                <ul>
+                    <li>
+                        <p>Define and create a single object, using an object literal.
+                            Literal is a list of name:value pairs (like age:50) inside curly braces {}.
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            var person = {<br>
+                                firstName:"John",<br>
+                                lastName:"Doe",<br> 
+                                age:50,<br> 
+                                eyeColor:"blue"<br>
+                                };                     
+                        </code>
+                    </li>
+                    <li>
+                        <p>Define and create a single object, with the keyword new.</p>
+                        <h6>Example</h6>
+                        <code>
+                            var person = new Object();<br>
+                            person.firstName = "John";<br>
+                            person.lastName = "Doe";                    
+                        </code>
+                    </li>
+                    <li>
+                        <p>Define an object constructor, and then create objects of the constructed type.</p>
+                        <h6>Example</h6>
+                        <code>
+                            function Person(first, last, age, eye) {<br>
+                                this.firstName = first;<br>
+                                this.lastName = last;<br>
+                                this.age = age;<br>
+                                this.eyeColor = eye;<br>
+                              }<br>
+                              let myFather = new Person("John", "Doe", 50, "blue");                   
+                        </code>
+                    </li>
+                </ul>
+                <p>Accessing objects properties</p>
+                <h6>Example</h6>
+                <code>
+                    object.property or object[“property”/expression] //synatx<br>
+                    myFather.firstName //example
+                </code>
+                <p>Access all properties of an object: for...in statement</p>
+                <h6>Example</h6>
+                <code>
+                    const student = {<br>
+                        name: "Dagmara",<br>
+                        age: 24<br>
+                    }<br>
+                    for (let prop in student){<br>
+                        console.log(prop);<br>
+                    }<br>
+                    output: name, age<br>
+                </code>
+                <p>Add new properties</p>
+                <h6>Example</h6>
+                <code>
+                    object.newProperty = “something”;
+                </code>
+                <p>“delete” key word, used to delete object property, has no effect on variables or functions</p>
+                <h6>Example</h6>
+                <code>
+                    delete object.property;
+                </code>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="strict_mode.js"></script>
+
+    <title>Strict Mode</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Strict Mode</h1>
+                <hr>
+                <p>
+                    Allocate phrase: "use strict" to activate code execution in strict mode.<br>
+                    Declared at the beginning of a script (applied globally) or a function (applied only for function scope).<br>
+                    Strict mode is used to get clearer, secure code.
+                    i.e. strict mode when activated not allows to use:
+                </p>
+                <ul>
+                    <li>
+                        <p>Undeclared variables or objects</p>
+                    </li>
+                    <li>
+                        <p>Deleting variables, objects or functions</p>
+                    </li>
+                    <li>
+                        <p>Duplicating a parameter name</p>
+                    </li>
+                    <li>
+                        <p>'this' keyword refers to the object that called the function</p>
+                    </li>
+                    <li>
+                        <p>'eval()' is not allowed to create variables in the scope from which it was called</p>
+                    </li>
+                    <li>
+                        <p>'with' statement </p>
+                    </li>
+                    <li>
+                        <p>The word arguments cannot be used as a variable</p>
+                    </li>
+                    <li>
+                        <p>The word eval cannot be used as a variable</p>
+                    </li>
+                    <li>
+                        <p>Deleting an undeletable property</p>
+                    </li>
+                    <li>
+                        <p>Writing to a get-only property</p>
+                    </li>
+                    <li>
+                        <p>Writing to a read-only property</p>
+                    </li>
+                </ul>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>
+

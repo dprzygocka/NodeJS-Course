@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="create_run.js"></script>
+
+
+    <title>Create & Run</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Create & Run</h1>
+                <hr>
+                <h4>Tools</h4>
+                <p>EXPRESS (node package/module)</p>
+                <ul>
+                    <li>
+                        <p>
+                            Tooling for HTTP servers, solution for single page applications, web sites, hybrids, or public HTTP APIs.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Installation: npm install express
+                        </p>
+                    </li>
+                </ul>
+                <p>NODEMON</p>
+                <ul>
+                    <li>
+                        <p>
+                            Tool which automatically restarting the node application when file changes in the directory are detected.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            To use it type command: nodemon.cmd &lt file name.js &gt (.cmd only necessary for windows users).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Installation: npm install -g nodemon
+                        </p>
+                    </li>
+                </ul>
+                <h4>Basic Project Strucutre</h4>
+                <p>
+                    PACKAGE.JSON contains:
+                </p>
+                <ul>
+                    <li>
+                        <p>dependencies</p>
+                    </li>
+                    <li>
+                        <p>scripts</p>
+                    </li>
+                    <li>
+                        <p>meta information</p>
+                    </li>
+                </ul>
+                <h6>Example:</h6>
+                <code>
+                    {
+                        "dependencies": {<br>
+                          "express": "^4.17.1"
+                        }
+                      }                      
+                </code>
+                <p>
+                    PACKAGE-LOCK.JSON:
+                </p>
+                <ul>
+                    <li>
+                        <p>contains meta information of what actually was installed on the machine that user is working on</p>
+                    </li>
+                    <li>
+                        <p>created by command npm install &lt library name &gt </p>
+                    </li>
+                </ul>
+                <p>
+                    NODE MODULES:
+                </p>
+                <ul>
+                    <li>
+                        <p>folder in which packages and the their external libraries (that they rely on, defined in their internal package.json) are defined</p>
+                    </li>
+                    <li>
+                        <p>ignored by git: person who gets the project can run npm install and based on package.json create their own node module folder</p>
+                    </li>
+                </ul>
+                <h4>Create & Run</h4>
+                <ol>
+                    <li>
+                        <p>
+                            Inside project folder create file package.json:
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    cd &lt folder name &gt //change direcotry using cd to locate yourself in project folder
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    place curly brackets n the package.json file
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    npm install (library name) //installs express in package.json
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            Inside project folder create entry file called app.js where:
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    Import library that we are using (in this case is express): 
+                                </p>
+                                <h6>Example:</h6>
+                                <code>
+                                    const express = require("express");                      
+                                </code>
+                            </li>
+                            <li>
+                                <p>
+                                    Instantiate the server: 
+                                </p>
+                                <h6>Example:</h6>
+                                <code>
+                                    const app = express();                      
+                                </code>
+                            </li>
+                            <li>
+                                <p>
+                                    Define the port on which the server will listen.<br>
+                                    App.listen accepts two arguments where first one is port number and second is callback function which handles potential error
+                                </p>
+                                <h6>Example:</h6>
+                                <code>
+                                    app.listen(8080, e => e ? console.log(e) : 'server is running on: ',8080);                   
+                                </code>
+                            </li>
+                            <li>
+                                <p>
+                                    Define the routes: 
+                                </p>
+                                <h6>Example:</h6>
+                                <code>
+                                    app.get( &lt endpoint &gt, (req,res) =&gt { res.send()})                   
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Run project by typing in command line:</p>
+                        <ul>
+                            <li>
+                                <p>
+                                    nodemon/node &lt file name &gt // nodemon.cmd on windows
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    after the command above node modules appears in the project structure
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>  
+    </div>
+</body>
+</html>

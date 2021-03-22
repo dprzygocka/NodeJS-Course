@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="strings.js"></script>
+
+    <title>Strings</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Strings</h1>
+                <hr>
+                <p>
+                    Used for storing and manipulating text.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    let x = "Dagmara";
+                </code>
+                <p>
+                    Have built-in properties like length: length of a string.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    let x = "Dagmara";<br>
+                    console.log(x.length);<br>
+                    output: 7               
+                </code>
+                <p>
+                    Common methods: 
+                </p>
+                <ul>
+                    <li><p>
+                            indexOf(): returns the index of the first occurrence of a specified text in a string, cannot take powerful search values (regular expressions).
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let x = “I am learning NodeJS”;<br>
+                            console.log(x.indexOf(“am”, 5));<br>
+                            output: -1
+                        </code>
+                    </li>
+                    <li><p>
+                            search(): searches the position of a specified string, cannot take a second start position argument.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let x = “I am learning NodeJS”;<br>
+                            console.log(x.indexOf(“am”));<br>
+                            output: 2
+                        </code>
+                    </li>    
+                    <li><p>
+                            slice(start, end): returns the extracted part in a new string.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let str = “apple beer banana”;<br>
+                            console.log(str.slice(-11, -7));<br>
+                            output: beer
+                        </code>
+                    </li>
+                    <li><p>
+                            substring(start, end): cannot accept negative indexes.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let str = “apple beer banana”;<br>
+                            console.log(str.substring(6,10));<br>
+                            output: beer
+                        </code>
+                    </li>    
+                    <li><p>
+                            substr(start, length): similar to slice, second parameter specifies the length of the extracted part.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let str = “apple beer banana”;<br>
+                            console.log(str.substr(6,4));<br>
+                            output: beer
+                        </code>
+                    </li>
+                    <li><p>
+                            replace(): replaces a specified value with another value. 
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            const fact = "You are learning javascript!";<br>
+                            const replaced = fact.replace("javascript", "Javascript");<br>
+                            console.log(replaced);<br>
+                            output: You are learning Javascript!<br>
+                        </code>
+                    </li>   
+                    <li><p>
+                            toUpperCase(): converted to upper case. 
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let str = “apple beer banana”;<br>
+                            console.log(str.toUpperCase());<br>
+                            output: APPLE BEER BANANA
+                        </code>
+                    </li>  
+                    <li><p>
+                            toLowerCase(): converted to lower case. 
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let str = “apple beer banana”;<br>
+                            console.log(str.toLowerCase());<br>
+                            output: apple beer banana
+                        </code>
+                    </li>    
+                    <li><p>
+                            trim(): removes whitespace from both sides of a string.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let firstName = “     Dagmara”;<br>
+                            console.log(firstName.trim());<br>
+                            output: Dagmara
+                        </code>
+                    </li>    
+                    <li><p>
+                            charAt(): returns the character at a specified index (position) in a string 
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let firstName = “Dagmara”;<br>
+                            console.log(firstName.charAt(2));<br>
+                            output: g
+                        </code>
+                    </li>  
+                    <li><p>
+                            split(): convert string to an array.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let str = “banana”;<br>
+                            console.log(str.split(“”));<br>
+                            output: [ 'b', 'a', 'n', 'a', 'n', 'a' ]
+                        </code>
+                    </li>        
+                </ul>
+                <p>
+                    Property Access:
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    var str = "HELLO WORLD";<br>
+                    console.log(str[0]);<br>
+                    output: H
+                </code>
+                <p>
+                    Concatenate Strings:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Operation performed by using + operator.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            console.log(“Hello” + “Dagmara”)<br>
+                            output: Hello Dagmara       
+                        </code>
+                    </li>  
+                    <li><p>
+                            Operation performed by using string literal.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let firstName = “Dagmara”;<br>
+                            let lastName = “Przygocka”;<br>
+                            console.log(“My first name is ${firstName} and my last name is ${lastName}”);
+                            output: My first name is Dagmara and my last name is Przygocka
+                        </code>
+                    </li>
+                    <li><p>
+                            Operation performed by using method concat().
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let firstName = “Dagmara”;<br>
+                            let lastName = “Przygocka”;<br>
+                            console.log(firstName.concat(“ “,lastName));<br>
+                            output: Dagmara Przygocka
+                        </code>
+                    </li>        
+                </ul>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>
+

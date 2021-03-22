@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="CRUD_REST_API.js"></script>
+
+    <title>CRUD REST APIs</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2"> 
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>CRUD REST APIs</h1>
+                <hr>
+                <h4>RESTful API</h4>
+                <ul>
+                    <li>
+                        <p>Application programming interface (API or web API) that conforms to the constraints of REST(representational state transfer).</p>
+                    </li>
+                    <li>
+                        <p>Architectural style and allows for interaction with RESTful web services. </p>
+                    </li>
+                    <li>
+                        <p>When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the endpoint.</p>
+                    </li>
+                    <li>
+                        <p>Information is delivered in different formats via  HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. </p>
+                    </li>
+                </ul>
+                <h4>CRUD REST API</h4>
+                <p>
+                    REST uses the HTTP protocol’s request types (POST, GET, PUT, and DELETE) to allow users to Create, Read, Update, and Delete (CRUD) via an API.
+                </p>
+                <p>GET request:</p>
+                <ul>
+                    <li>
+                        <p>Used to query resources:</p>
+                        <ul>
+                            <li>
+                                <p>Server has security feature that allows to send only HTML files.<br>
+                                    In order to serve static files we need to include workaround.
+                                </p>
+                                <h6>Example:</h6>
+                                <code>
+                                    app.use(express.static("public"));
+                                </code>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <p>Data are send via URL</p>
+                        <h6>Example via route parameter: </h6>
+                        <code>
+                            localhost:8080/variable (to retrive use req.params)    
+                        </code>
+                        <h6>Examplevia request parameter: </h6>
+                        <code>
+                            localhost:8080/users? name = value & name = value (to retrive use  req.query)    
+                        </code>
+                    </li>    
+                </ul>
+                <h6>GET Request Example</h6>
+                <code>
+                    app.get(“/path”, (req, res) => {<br>
+                        res.send() //send back response to user<br>
+                    })                        
+                </code>
+                <h6>GET request with identifier Example</h6>
+                <code>
+                    app.get(“/path/:identifier”, (req, res) => {<br>
+                        req.params.identidfier // retives identifier send in url<br>
+                    })                                            
+                </code>
+                <p>POST request:</p>
+                <ul>
+                    <li>
+                        <p>Used to create resources</p>
+                    </li> 
+                    <li>
+                        <p>Data are send in the body of the request</p>
+                    </li>  
+                    <li>
+                        <p>
+                            To handle POST in express we need middleware module called body-parser.<br>
+                            It extracts the entire body portion of an incoming request stream and makes it accessible on req.body.
+                        </p>
+                        <h6>Application in code example: </h6>
+                        <code>
+                            app.use(express.json());   
+                        </code>
+                    </li>    
+                </ul>
+                <h6>POST Request Example</h6>
+                <code>
+                    app.post(“/path”, (req,res) => {<br>
+                        req.body() // to extract body of the request<br>
+                        //do somthing with the body<br>
+                        res.send()<br>
+                    })                    
+                </code> 
+                <p>PUT request:</p>
+                <ul>
+                    <li>
+                        <p>Used to update entire resource i.e. whole object</p>
+                    </li>    
+                </ul>
+                <h6>PUT Request Example</h6>
+                <code>
+                    app.put(“/path:”, (req, res) => {<br>
+                        req.body // used to get data to update<br>
+                        // code to update data storage<br>
+                        res.send()<br>
+                    })                                  
+                </code>  
+                <p>PATCH request:</p>
+                <ul>
+                    <li>
+                        <p>Used to update part of an object i.e. only one parameter</p>
+                    </li>    
+                </ul>
+                <h6>PATCH Request Example</h6>
+                <code>
+                    app.patch(“/path”, (req, res) => {<br>
+                        req.body<br>
+                        //code to update resource<br>
+                        res.send()<br>
+                    })                                                      
+                </code>  
+                <p>DELETE request: </p>
+                <ul>
+                    <li>
+                        <p>Used to delete resource/ all resources</p>
+                    </li>    
+                </ul>
+                <h6>DELETE Request Example</h6>
+                <code>
+                    app.delete(“/path”, (req.res) => {<br>
+                        //code to delete resource<br>
+                        res.send()<br>
+                    })                                                                          
+                </code>   
+                <h4>Sending resource form .json or .html files</h4>  
+                <ul>
+                    <li>
+                        <p>To get content of .json file:</p>
+                        <h6>Example</h6>
+                        <code>
+                            require(“./cat.json”) //  best way<br>
+                            require(“./cat”) // also works<br>
+                            require(“cat”)  // checks only node modules so it won't work<br>
+                            })                                                      
+                        </code>
+                    </li>
+                    <li>
+                        <p>
+                            To get requested HTML page:<br>
+                            Use __dirname which returns path of the server, working with html.<br>
+                            Name of the file storing HTML differs, it can be: static, www, templates, but in NodeJS is is usually called public
+                        </p>
+                        <h6>Example</h6>
+                        <code>
+                            res.sendFile(__dirname + “//folder name where HTML is stored>//page name.html”)                                                     
+                        </code>
+                    </li>
+                </ul>                                    
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>

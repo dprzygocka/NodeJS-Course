@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="hoisting.js"></script>
+
+    <title>Hoisting</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+                
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Hoisting</h1>
+                <hr>
+                <p>
+                    Process of moving all declarations to the top of current script or function.<br>
+                    Hoisting moves only declarations to the top.
+                </p>
+                <h6>Declaration Example:</h6>
+                <code>
+                    var y;
+                </code>
+                <h6>Initialization Example:</h6>
+                <code>
+                    var y = 5;
+                </code>
+                <p>
+                    Using a let variable before it is declared will cause ReferenceError.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    carName = "Volvo";<br>
+                    let carName;       
+                </code>
+                <p>
+                    Using const variable before it is declared, is a syntax error, code will not run.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    carName = "Volvo";<br>
+                    const carName;      
+                </code>
+                <p>
+                    Allows functions to be called before they are declared.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    myF(2);<br><br>
+
+                function myF(x) {<br>
+                    return 2* x;<br>
+                }
+                </code>
+                <p>
+                    Functions defined using an expression are not hoisted.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    console.log(myfunction) //comment:  the variable name is hoisted, the definition isn't so it is undefined <br><br>
+
+                    let myfunction = function() {<br>
+                        console.log('cat');<br>
+                    };
+                </code>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>

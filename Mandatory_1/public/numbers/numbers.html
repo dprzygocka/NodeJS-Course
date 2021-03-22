@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="numbers.js"></script>
+
+    <title>Numbers</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Numbers</h1>
+                <hr>
+                <p>
+                    One type of numbers: can be written with, or without decimals
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    let x = 3.5 <br>
+                    let y = 6 
+                </code>
+                <p>
+                    Adding two numbers, will return the sum.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    let x = 10;<br>
+                    let y = 10;<br>
+                    let sum = x + y;<br>
+                    cnsole.log(sum);<br>
+                    output: 10           
+                </code>
+                <p>
+                    Adding a number and a string will return a string.
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    let x = "10";<br>
+                    let y = 10;<br>
+                    let sum = x + y;<br>
+                    cnsole.log(sum);<br>
+                    output: 1010   //string   
+                </code>
+                <p>
+                    Arithmetic with a non-numeric string will result in NaN (Not a Number).
+                </p>
+                <h6>Example:</h6>
+                <code>
+                    let x = "10";<br>
+                    let y = 10;<br>
+                    let number = x / y;<br>
+                    cnsole.log(number);<br>
+                    output: NaN   //string   
+                </code>
+                <p>
+                    Common methods: 
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            toString():returns a number as a string.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            let x = 20;<br>
+                            console.log(x.toString());<br>
+                            output: 20 //type string
+                        </code>
+                    </li>
+                    <li>
+                        <p>
+                            Number() : changes its argument and returns a number.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            const numberOne = "1.10";<br>
+                            const numberTwo = "2.30";<br>
+                            const sum = Number(numberOne) + Number(numberTwo)<br>
+                            console.log(sum)<br>
+                            output: 3.4
+                        </code>
+                    </li>    
+                    <li>
+                        <p>
+                            parseFloat() :changes its argument and returns a floating point number.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            const anotherNumberOne = "1.10";<br>
+                            console.log(parseFloat(anotherNumberOne));<br>
+                            output: 1.10
+                        </code>
+                    </li>
+                    <li><p>
+                            parseInt() :changes its argument and returns an integer.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            const anotherNumberOne = "1.10";<br>
+                            console.log(parseInt(anotherNumberOne));<br>
+                            output: 1
+                        </code>
+                    </li>    
+                    <li>
+                        <p>
+                            toFixed() : returns a string, with the number with a specified number of decimals.
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            const anotherNumberOne = "1.10";<br>
+                            const anotherNumberTwo = "2.30";<br>
+                            const sumWithDecimals = Number(anotherNumberOne) + Number(anotherNumberTwo)<br>
+                            console.log(sumWithDecimals.toFixed(2))<br>
+                            output: 3.40
+                        </code>
+                    </li>
+                    <li>
+                        <p>
+                            toPrecision():  returns a string, with a number with a specified length. 
+                        </p>
+                        <h6>Example:</h6>
+                        <code>
+                            const anotherNumberOne = "1.10";<br>
+                            const anotherNumberTwo = "2.30";<br>
+                            const sumWithDecimals = Number(anotherNumberOne) + Number(anotherNumberTwo)<br>
+                            console.log(sumWithDecimals.toPrecision(2))<br>
+                            output: 3.4
+                        </code>
+                    </li> 
+                </ul>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>
+
+

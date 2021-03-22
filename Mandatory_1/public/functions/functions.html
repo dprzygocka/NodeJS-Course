@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../menu/menu.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <script src="functions.js"></script>
+
+    <title>Functions</title>
+</head>
+<body>
+    <div class="container-flex" >
+        <div class = "page-headder">
+            <a href="/" >
+                <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt = "NodeJS logo"></img>
+                <h1><b>NodeJS Course</b></h1></a>
+        </div>
+        <div class ="row">
+            <div id = "menu" class= "col-sm-12 col-md-2">
+ 
+            </div>
+            <div class = "col-sm-12 col-md-10 menu-style content">
+                <a class = "btn" href="/">Home</a>
+                <h1>Functions</h1>
+                <hr>
+                <ul>
+                    <li>
+                        <p>Type of function in Javascript is function but can be described as object.</p>
+                    </li>
+                    <li>
+                        <p>Has propertis and methods.</p>
+                    </li>
+                    <li>
+                        <p>Do not specify data types for parameters.</p>
+                    </li>
+                    <li>
+                        <p>Do not perform type checking on the passed arguments.</p>
+                    </li>
+                    <li>
+                        <p>Do not check the number of arguments received. missing values are set to undefined.</p>
+                    </li>
+                    <li>
+                        <p>Changes to arguments are not visible outside the function.</p>
+                    </li>
+                    <li>
+                        <p>Changes to object properties are visible outside the function.</p>
+                    </li>
+                    <li>
+                        <p>Defined with key word: 'function'.</p>
+                    </li>
+                    <li>
+                        <p>Two ways of defining functions: declaration or expression.</p>
+                    </li>
+                </ul>
+                <p>Function Declaration</p>
+                <ul>
+                    <li>
+                        <p>Declared functions are not executed immediately.</p>
+                    </li> 
+                    <li>
+                        <p>They have to be called in program</p>
+                    </li>     
+                </ul>
+                <h6>Example</h6>
+                <code>
+                    function myfunction(parameters) {<br>
+                        //code<br>
+                    }<br>
+                    Invocation:<br>
+                    myfunction (parameters);    
+                </code>
+                <p>Function Expression</p>
+                <ul>
+                    <li>
+                        <p>Can be stored in a variable which allows the variable to be used as a function.</p>
+                    </li> 
+                    <li>
+                        <p>The invokation of the function is by variable name.</p>
+                    </li>     
+                </ul>
+                <h6>Example</h6>
+                <code>
+                    var x = function (x, y) {<br>
+                        return x*y<br>
+                    }<br>
+                    Invocation:<br>
+                    x(x,y);                          
+                </code>
+                <p>Arrow Function</p>
+                <ul>
+                    <li>
+                        <p>Have short syntax where keyword function, return and curly brackets are not always needed.</p>
+                    </li> 
+                    <li>
+                        <p>They don't have their own 'this'.</p>
+                    </li>    
+                    <li>
+                        <p>Not for defining object methods.</p>
+                    </li>  
+                    <li>
+                        <p>Not hoisted so must be defined before they are used.</p>
+                    </li> 
+                </ul>
+                <h6>Example</h6>
+                <code>
+                    const x = (x,y) => x*y;                         
+                </code>
+                <p>Callback Function</p>
+                <ul>
+                    <li>
+                        <p>A callback is a function passed as an argument to another function.</p>
+                    </li> 
+                </ul>
+                <h6>Example</h6>
+                <code>
+                    const fetchItems = (callback, ...params) => {<br>
+                        callback(params);<br>
+                    }<br><br>
+                        
+                    fetchItems (console.log, 'foo', 1);                       
+                </code>
+                <p>THIS in function</p>
+                <ul>
+                    <li>
+                        <p>
+                        Global object (THIS == web browser == browser window)<br>
+                        Function called without an owner object, the value of this becomes the global object
+                        </p>
+                    </li> 
+                    <li>
+                        <p>
+                            Invoking a Function as a Method
+                            Invoking function which is a part of an object. (THIS == objects which stores the function(object method))
+                        </p>
+                    </li>     
+                </ul>
+            </div>     
+        </div> 
+        <footer class="footer">
+            <p>© Copyright 2021 Dagmara Przygocka</p>
+        </footer>    
+    </div>
+</body>
+</html>
